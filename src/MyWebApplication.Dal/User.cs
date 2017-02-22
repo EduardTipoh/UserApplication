@@ -15,5 +15,6 @@ namespace MyWebApplication.Dal
         public string LastName { get; set; }
         public string Gender { get; set; }
         public int? Age { get; set; }
+        public DateTime? EmploymentDate { get; set; }
     }
 }

@@ -44,7 +44,8 @@ namespace MyWebApplication.Areas.Security.Controllers
                                  Name = user.Name,
                                  Age = user.Age,
                                  Gender = user.Gender,
-                                 LastName = user.LastName
+                                 LastName = user.LastName,
+                                 EmploymentDate = user.EmploymentDate
                              }).ToList();
                 return View(users);
             }
@@ -80,7 +81,8 @@ namespace MyWebApplication.Areas.Security.Controllers
                        Name = viewModel.Name,
                        LastName = viewModel.LastName,
                        Gender = viewModel.Gender,
-                       Age = viewModel.Age
+                       Age = viewModel.Age,
+                       EmploymentDate = viewModel.EmploymentDate
                    });
                      db.SaveChanges();
                 }
@@ -114,6 +116,7 @@ namespace MyWebApplication.Areas.Security.Controllers
                     edit.LastName = viewModel.LastName;
                     edit.Age = viewModel.Age;
                     edit.Gender = viewModel.Gender;
+                    edit.EmploymentDate = viewModel.EmploymentDate;
 
                     db.SaveChanges();
 
@@ -164,7 +167,8 @@ namespace MyWebApplication.Areas.Security.Controllers
                            Name = user.Name,
                            LastName=user.LastName,
                             Age = user.Age,
-                            Gender = user.Gender
+                            Gender = user.Gender,
+                            EmploymentDate = user.EmploymentDate
                         }).FirstOrDefault();
 
                 //db.Users.Select(u => new UserViewModel { 
