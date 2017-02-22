@@ -140,6 +140,7 @@ dd {
 h2, .h2 {
     font-size: 30px;
     margin-top: 30px;
+    color: lightgray;
 }
 
 table {
@@ -174,15 +175,16 @@ fieldset {
 .col-md-6 {
     
 }
-margin-bottom: 20px;
-background-image: url("https://s15.postimg.org/m33fpj5nf/noprofile.png");
-background-repeat: no-repeat;
-background-size: 200px;
-div { width: 300px;
-border: 1px solid black;
-padding: 10px;
-margin: 1-px;
-width: 300px;
-
-
-
+.jumbotron {
+    padding-top: 1px;
+    padding-bottom: 72px;
+}
+.Add {
+    margin-left: 312px;
+}
+.school {
+    margin-top: -13px;
+}
+.attend {
+    margin-top: -15px;
+}

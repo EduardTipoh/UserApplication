@@ -19,6 +19,7 @@ namespace MyWebApplication.Areas.Security.Models
         [MaxLength(15, ErrorMessage="Maximum of 10 Letters Only")]
         [Display(Name="Your Last Name")]
        public string LastName { get; set; }
+        public string FullName { get; set; }
         public string Gender { get; set; }
         public int? Age { get; set; }
         public DateTime? EmploymentDate { get; set; }
