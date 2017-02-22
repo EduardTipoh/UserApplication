@@ -14,9 +14,11 @@ namespace MyWebApplication.Areas.Security.Models
         [MaxLength(20, ErrorMessage = "Maximum of 20 characters")]
          [Display(Name="Your name")]
         public string Name { get; set; }
-
         [Required]
-        public string Hobby { get; set; }
+        [MinLength(3, ErrorMessage="Minimum of 3 Letters")]
+        [MaxLength(15, ErrorMessage="Maximum of 10 Letters Only")]
+        [Display(Name="Your Last Name")]
+       public string LastName { get; set; }
         public string Gender { get; set; }
         public int? Age { get; set; }
     }

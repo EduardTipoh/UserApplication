@@ -17,10 +17,8 @@
         <a href="@Url.Action("Edit", new { id = Model.Id })" class="text details-btn-link">
             <span class="glyphicon glyphicon-pencil"></span> Edit
         </a>
-            <dt>
-                <b>
+            <dt>    
                 @Html.DisplayNameFor(model => model.Name)
-                </b>
             </dt>
 
             <dd class="details-name">
@@ -28,11 +26,11 @@
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.Hobby)
+                @Html.DisplayNameFor(model => model.LastName)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.Hobby)
+                @Html.DisplayFor(model => model.LastName)
             </dd>
 
             <dt>

@@ -43,7 +43,8 @@ namespace MyWebApplication.Areas.Security.Controllers
                                  Id = user.Id,
                                  Name = user.Name,
                                  Age = user.Age,
-                                 Gender = user.Gender
+                                 Gender = user.Gender,
+                                 LastName = user.LastName
                              }).ToList();
                 return View(users);
             }
@@ -77,7 +78,7 @@ namespace MyWebApplication.Areas.Security.Controllers
                    {
                        // Id = Guid.NewGuid(),
                        Name = viewModel.Name,
-                       Hobby = viewModel.Hobby,
+                       LastName = viewModel.LastName,
                        Gender = viewModel.Gender,
                        Age = viewModel.Age
                    });
@@ -110,7 +111,7 @@ namespace MyWebApplication.Areas.Security.Controllers
                 {
                     var edit = db.Users.FirstOrDefault(u => u.Id == id);
                     edit.Name = viewModel.Name;
-                    edit.Hobby = viewModel.Hobby;
+                    edit.LastName = viewModel.LastName;
                     edit.Age = viewModel.Age;
                     edit.Gender = viewModel.Gender;
 
@@ -161,6 +162,7 @@ namespace MyWebApplication.Areas.Security.Controllers
                         {
                             Id = user.Id,
                            Name = user.Name,
+                           LastName=user.LastName,
                             Age = user.Age,
                             Gender = user.Gender
                         }).FirstOrDefault();
