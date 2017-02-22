@@ -75,24 +75,33 @@ namespace MyWebApplication.Areas.Security.Controllers
 
                 using (var db = new DatabaseContext())
                 {
-                db.Users.Add(new User
-                   {
-                       // Id = Guid.NewGuid(),
-                       Name = viewModel.Name,
-                       LastName = viewModel.LastName,
-                       Gender = viewModel.Gender,
-                       Age = viewModel.Age,
-                       EmploymentDate = viewModel.EmploymentDate
-                   });
-                     db.SaveChanges();
+                    var NewUser = new User
+                        {
+                            // Id = Guid.NewGuid(),
+                            Name = viewModel.Name,
+                            LastName = viewModel.LastName,
+                            Gender = viewModel.Gender,
+                            Age = viewModel.Age,
+                            EmploymentDate = viewModel.EmploymentDate
+                        };
+                    NewUser.Edu.Add(new Educations
+                    {
+                        School = viewModel.School,
+                        YearAttended = viewModel.YearAttended
+                    });
+                    db.Users.Add(NewUser);
+                    db.SaveChanges();
+
+
+                    return RedirectToAction("Index");
                 }
-                return RedirectToAction("Index");
             }
             catch
             {
                 return View();
             }
         }
+    
 
 
           

@@ -9,6 +9,10 @@ namespace MyWebApplication.Dal
 {
     public class User
     {
+        public User()
+        {
+            Edu = new List<Educations>();
+        }
         [Key]
         public int Id { get;set; }
         public string Name { get; set; }
@@ -16,5 +20,7 @@ namespace MyWebApplication.Dal
         public string Gender { get; set; }
         public int? Age { get; set; }
         public DateTime? EmploymentDate { get; set; }
+
+        public ICollection<Educations> Edu { get; set; }
     }
 }
